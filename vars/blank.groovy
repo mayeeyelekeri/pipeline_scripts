@@ -8,6 +8,7 @@ def call(body) {
 	  stage('Build') {
 	    steps { 
 		  echo "inside build"
+		  echo env.DB_HOST
 		}
 	  }
 	  stage('deploy') {

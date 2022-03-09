@@ -6,10 +6,15 @@ def call(body) {
 
 	stages {
 	  stage('Build') {
-		echo "inside build"
+	    steps { 
+		  echo "inside build"
+		  echo "DB_HOST = " . env.DB_HOST
+		}
 	  }
 	  stage('deploy') {
-		echo "inside deploy"
+	    steps { 
+		  echo "inside deploy"
+		}
 	  }
 	}
   }
