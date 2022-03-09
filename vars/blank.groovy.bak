@@ -1,5 +1,5 @@
 
-def getAllEnvVars(host)
+def getAllEnvVars(host) {
 	echo host 
 	DB_HOST = host 
 }
