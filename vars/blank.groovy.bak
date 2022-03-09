@@ -6,14 +6,10 @@ def call(body) {
 
 	stages {
 	  stage('Build') {
-	    steps { 
-		  echo "inside build"
-		}
+		echo "inside build"
 	  }
 	  stage('deploy') {
-	    steps { 
-		  echo "inside deploy"
-		}
+		echo "inside deploy"
 	  }
 	}
   }
