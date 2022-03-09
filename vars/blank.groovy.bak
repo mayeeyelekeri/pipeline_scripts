@@ -1,3 +1,9 @@
+
+def getAllEnvVars(host)
+	echo host 
+	DB_HOST = host 
+}
+
 def call(body) {
   def config = [:]
   body.resolveStrategy = Closure.DELEGATE_FIRST
@@ -8,7 +14,7 @@ def call(body) {
     agent any 
 
 	environment { 
-		DB_HOST = config.DB_HOST
+		DB_HOST = getAllEnvVars(config.DB_HOST)
 	}
 	
 	stages {
