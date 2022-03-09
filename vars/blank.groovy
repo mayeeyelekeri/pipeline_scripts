@@ -13,6 +13,7 @@ def call(body) {
 	    steps { 
 		  echo "inside build"
 		  echo "${DB_HOST}"
+		  echo "Global db = ${MY_GLOBAL_DB}"
 		}
 	  }
 	  stage('deploy') {
