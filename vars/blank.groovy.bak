@@ -5,7 +5,7 @@ def call(body) {
     agent any 
 
 	environment { 
-		DB_HOST = "config.DB_HOST"
+		// DB_HOST = "config.DB_HOST"
 	}
 	
 	stages {
