@@ -1,12 +1,7 @@
 
 def getAllEnvVars(host) {
 	echo host 
-	DB_HOST = host 
-	echo "displaying all params "
-	config.each {config ->
-      echo "${config.key} -> ${config.value} "
-	echo "displaying all params .. end  "
-}
+	DB_HOST = host 	
 }
 
 def call(body) {
@@ -31,7 +26,7 @@ def call(body) {
 		  script { 
 			if (config.DB_HOST != null) {
 				echo "displaying DB_HOST"
-				echo 'config.DB_HOST'
+				echo "DB HOST is 'config.DB_HOST'"
 			}
 		  
 			if (config.JUNK != null) {
