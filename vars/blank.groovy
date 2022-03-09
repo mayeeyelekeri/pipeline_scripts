@@ -23,7 +23,16 @@ def call(body) {
 		  echo "inside build"
 		  echo "${DB_HOST}"
 		  echo "Global db = ${MY_GLOBAL_DB}"
-		  echo config.DB_HOST
+		  if (config.DB_HOST != null) {
+			echo "displaying DB_HOST"
+			echo config.DB_HOST
+		  }
+		  
+		  if (config.JUNK != null) {
+			echo "displaying JUNK"
+			echo config.JUNK
+		  }
+		  
 		}
 	  }
 	  stage('deploy') {
