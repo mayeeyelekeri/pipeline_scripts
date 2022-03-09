@@ -4,9 +4,9 @@ def call(body) {
   pipeline {
     agent any 
 
-	//environment { 
-		// DB_HOST = "config.DB_HOST"
-	//}
+	environment { 
+		DB_HOST = "${DB_HOST}"
+	}
 	
 	stages {
 	  stage('Build') {
