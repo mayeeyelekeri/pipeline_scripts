@@ -14,6 +14,7 @@ def call(body) {
 		  echo "inside build"
 		  echo "${DB_HOST}"
 		  echo "Global db = ${MY_GLOBAL_DB}"
+		  echo env.DB_HOST
 		}
 	  }
 	  stage('deploy') {
