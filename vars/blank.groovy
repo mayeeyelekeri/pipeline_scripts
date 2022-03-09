@@ -3,7 +3,7 @@ def getAllEnvVars(host) {
 	echo host 
 	DB_HOST = host 
 	echo "displaying all params "
-	params.each {config ->
+	config.each {config ->
       echo "${config.key} -> ${config.value} "
 	echo "displaying all params .. end  "
 }
