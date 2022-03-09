@@ -2,13 +2,17 @@ def call(body) {
   body()
 
   pipeline {
-    	agent any 
+    agent any 
 
+	environment { 
+		DB_HOST = config.DB_HOST
+	}
+	
 	stages {
 	  stage('Build') {
 	    steps { 
 		  echo "inside build"
-		  echo env.DB_HOST
+		  echo ${DB_HOST}
 		}
 	  }
 	  stage('deploy') {
