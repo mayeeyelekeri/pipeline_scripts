@@ -5,7 +5,7 @@ def call(body) {
     agent any 
 
 	environment { 
-		DB_HOST = "${DB_HOST}"
+		DB_HOST = config.DB_HOST
 	}
 	
 	stages {
@@ -14,7 +14,7 @@ def call(body) {
 		  echo "inside build"
 		  echo "${DB_HOST}"
 		  echo "Global db = ${MY_GLOBAL_DB}"
-		  echo config.DB_HOST
+		  //echo config.DB_HOST
 		}
 	  }
 	  stage('deploy') {
