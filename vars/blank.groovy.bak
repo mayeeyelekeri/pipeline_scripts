@@ -1,4 +1,5 @@
 def call(body) {
+  def config = [:]
   body()
 
   pipeline {
