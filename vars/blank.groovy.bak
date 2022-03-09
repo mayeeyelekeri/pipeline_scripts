@@ -2,6 +2,11 @@
 def getAllEnvVars(host) {
 	echo host 
 	DB_HOST = host 
+	echo "displaying all params "
+	params.each {param ->
+      echo "${param.key} -> ${param.value} "
+	echo "displaying all params .. end  "
+}
 }
 
 def call(body) {
