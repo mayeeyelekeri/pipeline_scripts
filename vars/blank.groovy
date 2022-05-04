@@ -13,7 +13,7 @@ def call(body) {
     agent any 
 
 	environment { 
-		DB_HOST = getAllEnvVars(config.DB_HOST)
+		//DB_HOST = getAllEnvVars(config.DB_HOST)
 	}
 	
 	stages {
