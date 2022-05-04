@@ -1,6 +1,6 @@
 
 def getAllEnvVars(host) {
-	echo ------ inside getAllEnvVars
+	echo inside getAllEnvVars
 	echo host 
 	DB_HOST = host 
 	MY_GLOBAL_DB = host
