@@ -2,8 +2,7 @@
 def getAllEnvVars(host) {
 	echo "inside globalAllEnvVars()" 
 	echo host 
-	DB_HOST = host 
-	MY_GLOBAL_DB = host 
+
 }
 
 def call(body) {
