@@ -23,7 +23,7 @@ def call(body) {
 	    steps { 
 		  echo "inside build"
 		  echo "${DB_HOST}"
-		  echo "Global db = ${MY_GLOBAL_DB}"
+
 		  script { 
 			if (config.DB_HOST != null) {
 				echo "displaying DB_HOST"
