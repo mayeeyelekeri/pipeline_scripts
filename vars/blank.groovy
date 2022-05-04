@@ -24,6 +24,7 @@ def call(body) {
 	          echo "inside build, host is ${DB_HOST}"
 
 		  script { 
+			  echo "DB HOST is '${config.DB_HOST}'"
 			if (config.DB_HOST != null) {
 				echo "displaying DB_HOST"
 				echo "DB HOST is '${config.DB_HOST}'"
