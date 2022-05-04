@@ -26,7 +26,7 @@ def call(body) {
 		  script { 
 			  echo "DB HOST is '${config.DB_HOST}'"
 			   echo "DB HOST is '${config.dbhost}'"
-			  echo "all params = '${config.*}'"
+			  echo "all params  '${config.*}'"
 			if (config.DB_HOST != null) {
 				echo "displaying DB_HOST"
 				echo "DB HOST is '${config.DB_HOST}'"
