@@ -1,6 +1,9 @@
 
 def getAllEnvVars(host) {
 	echo inside 
+	echo host 
+	DB_HOST = host 
+	MY_GLOBAL_DB = host 
 }
 
 def call(body) {
@@ -13,7 +16,7 @@ def call(body) {
     agent any 
 
 	environment { 
-		//DB_HOST = getAllEnvVars(config.DB_HOST)
+		DB_HOST = getAllEnvVars(config.dbhost)
 	}
 	
 	stages {
