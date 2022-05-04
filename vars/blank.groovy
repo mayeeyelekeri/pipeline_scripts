@@ -21,8 +21,7 @@ def call(body) {
 	stages {
 	  stage('Build') {
 	    steps { 
-		  echo "inside build"
-		  echo "${DB_HOST}"
+	          echo "inside build, host is ${DB_HOST}"
 
 		  script { 
 			if (config.DB_HOST != null) {
