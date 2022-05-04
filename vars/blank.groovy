@@ -1,8 +1,10 @@
 
 def getAllEnvVars(host) {
+	echo ------ inside getAllEnvVars
 	echo host 
 	DB_HOST = host 
 	MY_GLOBAL_DB = host
+	return host 
 }
 
 def call(body) {
