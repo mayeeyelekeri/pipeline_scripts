@@ -2,7 +2,7 @@
 def getAllEnvVars(host) {
 	echo "inside globalAllEnvVars()" 
 	echo host 
-
+	return host
 }
 
 def call(body) {
