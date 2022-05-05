@@ -21,6 +21,15 @@ def call(body) {
 		DB_HOST = getAllEnvVars(config.dbhost)
 	}
 	
+	  switch (config.type) { 
+		    	case 'info': log_info config.message
+			    break 
+			case 'warning': log_info config.message
+			    break
+			default: log_info "no message"
+		    } // end of switch
+		    
+	  
 	stages {
 	  stage('Build') {
 	    steps {
