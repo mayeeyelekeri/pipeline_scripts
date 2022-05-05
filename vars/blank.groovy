@@ -1,3 +1,6 @@
+def log_message(msg) { 
+	echo "Message from code: ${msg}"	
+}
 
 def getAllEnvVars(host) {
 	echo "inside globalAllEnvVars()" 
@@ -20,7 +23,15 @@ def call(body) {
 	
 	stages {
 	  stage('Build') {
-	    steps { 
+	    steps {
+		    switch (config.type) { 
+		    	case 'info': log_info config.message
+			    break 
+			case 'warning': log_info config.message
+			    break
+			default: log_info "no message"
+		    } // end of switch
+		    
 	          echo "inside build, host is ${DB_HOST}"
 
 		  script { 
