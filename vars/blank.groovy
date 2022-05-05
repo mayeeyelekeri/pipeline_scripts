@@ -24,13 +24,6 @@ def call(body) {
 	stages {
 	  stage('Build') {
 	    steps {
-		    switch (config.type) { 
-		    	case 'info': log_info config.message
-			    break 
-			case 'warning': log_info config.message
-			    break
-			default: log_info "no message"
-		    } // end of switch
 		    
 	          echo "inside build, host is ${DB_HOST}"
 
